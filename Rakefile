@@ -10,6 +10,35 @@ namespace :greeting do
   end 
 
 
+namespace :goodbye do 
+  desc "outputs later to the terminal"
+  task :later do
+    puts "see ya later alligator"
+  end 
+  
+  desc "outputs sayonara to the terminal"
+  task :sayonara do 
+    puts "sayonara my friends!"
+  end 
+
+
+  task :environment do 
+    require_relative './config/environment'
+  end 
+
+    
+  namespace :db do 
+    desc 'migrate changes to your database'
+    task :migrate => :environment do 
+      Student.create_table 
+  end 
+
+
+  namespace :db do
+    desc 'seed the database with some dummy data'
+    task :seed do
+      require_relative './db/seeds.rb'
+  end
 
 
   desc 'drop into the Pry console'
