@@ -21,7 +21,7 @@ namespace :goodbye do
     puts "sayonara my friends!"
   end 
 
-
+  desc 'does'
   task :environment do 
     require_relative './config/environment'
   end 
@@ -33,8 +33,6 @@ namespace :goodbye do
       Student.create_table 
   end 
 
-
-  namespace :db do
     desc 'seed the database with some dummy data'
     task :seed do
       require_relative './db/seeds.rb'
