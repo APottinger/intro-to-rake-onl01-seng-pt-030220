@@ -10,4 +10,16 @@ namespace :greeting do
   end 
 end 
 
+namespace :goodbye do 
+  desc "outputs later to the terminal"
+  task :later do
+    puts "see ya later alligator"
+  end 
+  
+  desc "outputs sayonara to the terminal"
+  task :sayonara do 
+    puts "sayonara my friends!"
+  end 
+end
 
+    
